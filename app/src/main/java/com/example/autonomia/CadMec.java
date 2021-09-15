@@ -1,4 +1,4 @@
-package com.example.pji;
+package com.example.autonomia;
 
 import androidx.appcompat.app.AppCompatActivity;
 
