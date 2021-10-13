@@ -7,21 +7,50 @@
     android:background="#A3EBB1"
     tools:context=".AvalPosto">
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/campoAval"
+        android:layout_width="210dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.34"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/avalicaoMecanicoComentario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Faça aqui seu comentário" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <RatingBar
+        android:id="@+id/ratingBar4"
+        style="@android:style/Widget.DeviceDefault.Light.RatingBar.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_weight="1"
+        app:layout_constraintBottom_toBottomOf="@+id/campoAval"
+        app:layout_constraintStart_toEndOf="@+id/campoAval"
+        app:layout_constraintTop_toTopOf="@+id/campoAval" />
+
     <TextView
         android:id="@+id/textView19"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="Posto ..................."
-        android:textSize="22sp"
+        android:textSize="28sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="298dp"
-        android:layout_height="202dp"
+        android:layout_width="265dp"
+        android:layout_height="176dp"
         android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,11 +61,9 @@
         android:id="@+id/textView22"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="8dp"
         android:text="Posto ..................."
         android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <TextView
@@ -128,7 +155,7 @@
 
     <View
         android:id="@+id/divider2"
-        android:layout_width="409dp"
+        android:layout_width="0dp"
         android:layout_height="1dp"
         android:layout_marginTop="8dp"
         android:background="?android:attr/listDivider"
@@ -194,7 +221,7 @@
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="168dp"
+        android:layout_width="wrap_content"
         android:layout_height="35dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
@@ -310,13 +337,11 @@
         android:id="@+id/textView38"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
         android:layout_marginEnd="16dp"
         android:text="5"
         app:layout_constraintBottom_toBottomOf="@+id/progressBar"
         app:layout_constraintEnd_toStartOf="@+id/progressBar"
-        app:layout_constraintTop_toBottomOf="@+id/textView36"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="@+id/progressBar" />
 
     <ProgressBar
         android:id="@+id/progressBar2"
@@ -397,41 +422,17 @@
         app:layout_constraintStart_toEndOf="@+id/imageView4"
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
-    <EditText
-        android:id="@+id/editTextTextMultiLine"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:gravity="start|top"
-        android:hint="Faça aqui sua avaliação"
-        android:inputType="textMultiLine"
-        android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.35"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
-
-    <RatingBar
-        android:id="@+id/ratingBar3"
-        style="@style/Widget.AppCompat.RatingBar.Small"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextTextMultiLine"
-        app:layout_constraintStart_toEndOf="@+id/editTextTextMultiLine"
-        app:layout_constraintTop_toTopOf="@+id/editTextTextMultiLine" />
-
     <Button
         android:id="@+id/button4"
         android:layout_width="82dp"
         android:layout_height="34dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
         android:text="Enviar"
         android:textColor="#80000000"
         android:textSize="12sp"
         app:backgroundTint="#C4C4C4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ratingBar3" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
