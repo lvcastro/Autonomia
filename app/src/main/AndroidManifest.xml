@@ -16,18 +16,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Autonomia">
-        <activity android:name=".AttPrecos" />
-        <activity android:name=".AvalMec" />
-        <activity android:name=".AvalPosto" />
-        <activity android:name=".CadMec" />
-        <activity android:name=".CadUsuario" />
-        <activity android:name=".CadPosto">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".AttPrecos"></activity>
+        <activity android:name=".AvalMec"></activity>
+        <activity android:name=".AvalPosto"></activity>
+        <activity android:name=".CadMec"></activity>
+        <activity android:name=".CadUsuario"></activity>
+        <activity android:name=".CadPosto"></activity>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -42,7 +36,13 @@
 
         <activity
             android:name=".MapsActivity"
-            android:label="@string/title_activity_maps"></activity>
+            android:label="@string/title_activity_maps" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
