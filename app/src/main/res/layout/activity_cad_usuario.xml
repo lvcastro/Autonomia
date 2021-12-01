@@ -7,22 +7,35 @@
     android:background="#A3EBB1"
     tools:context=".CadUsuario">
 
+    <EditText
+        android:id="@+id/txtNascimento"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:hint="Digite sua data de nascimento"
+        android:inputType="textPersonName"
+        android:textSize="16sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView10" />
+
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/btnEnviar"
         android:layout_width="wrap_content"
         android:layout_height="34dp"
         android:text="Enviar"
         android:textColor="#80000000"
         android:textSize="12sp"
         app:backgroundTint="#C4C4C4"
-        app:layout_constraintBottom_toBottomOf="@+id/button7"
+        app:layout_constraintBottom_toBottomOf="@+id/btnCancelar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button7"
-        app:layout_constraintTop_toTopOf="@+id/button7" />
+        app:layout_constraintStart_toEndOf="@+id/btnCancelar"
+        app:layout_constraintTop_toTopOf="@+id/btnCancelar" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/btnCancelar"
         android:layout_width="wrap_content"
         android:layout_height="34dp"
         android:layout_marginTop="24dp"
@@ -30,7 +43,7 @@
         android:textColor="#80000000"
         android:textSize="12sp"
         app:backgroundTint="#C4C4C4"
-        app:layout_constraintEnd_toStartOf="@+id/button8"
+        app:layout_constraintEnd_toStartOf="@+id/btnEnviar"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtSenhaUsuario" />
@@ -111,20 +124,6 @@
         app:layout_constraintStart_toEndOf="@+id/textView9" />
 
     <EditText
-        android:id="@+id/txtNascimentoUsuario"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:ems="10"
-        android:hint="Digite sua data de nascimento"
-        android:inputType="textPersonName"
-        android:textSize="16sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView10"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView10" />
-
-    <EditText
         android:id="@+id/txtEmailUsuario"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -164,6 +163,7 @@
         android:textSize="16sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView13"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/textView13" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

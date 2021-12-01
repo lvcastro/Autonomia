@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "110769173746",
+    "project_id": "autonomia-af2b6",
+    "storage_bucket": "autonomia-af2b6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:110769173746:android:1b41af44ed4196fe8a8c6b",
+        "android_client_info": {
+          "package_name": "com.example.autonomia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "110769173746-11ugaqf61f9ifgj45ovsf01pommhr793.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyClVyxQOaVOo56-xfLjECt9SsdQ-P749v0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "110769173746-11ugaqf61f9ifgj45ovsf01pommhr793.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
