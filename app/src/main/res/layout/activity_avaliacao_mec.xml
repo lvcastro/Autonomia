@@ -318,6 +318,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
+    <RatingBar
+        android:id="@+id/ratingBar9"
+        style="@android:style/Widget.DeviceDefault.Light.RatingBar.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_weight="1"
+        app:layout_constraintBottom_toBottomOf="@+id/campoAval"
+        app:layout_constraintStart_toEndOf="@+id/campoAval"
+        app:layout_constraintTop_toTopOf="@+id/campoAval" />
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/campoAval"
         android:layout_width="210dp"
