@@ -15,7 +15,7 @@ import java.util.Map;
 
 public class CadUsuario extends AppCompatActivity {
     private DatabaseReference BD = FirebaseDatabase.getInstance().getReference();
-    private EditText txtNomeUsuario,txtEmailUsuario,txtCpfUsuario,txtSenhaUsuario,txtNascimento;
+    private EditText txtNomeUsuario,txtEmailUsuario,txtCpfUsuario,txtSenhaUsuario,txtNascimentoUsuario;
     private Button btnEnviar,btnCancelar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +23,7 @@ public class CadUsuario extends AppCompatActivity {
         txtEmailUsuario=findViewById(R.id.txtEmailUsuario);
         txtCpfUsuario =findViewById(R.id.txtCpfUsuario);
         txtSenhaUsuario=findViewById(R.id.txtSenhaUsuario);
-        txtNascimento =findViewById(R.id.txtNascimento);
+        txtNascimentoUsuario =findViewById(R.id.txtNascimentoUsuario);
         btnEnviar.setOnClickListener( new EscutadorBotao());
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cad_usuario);
@@ -39,7 +39,7 @@ public class CadUsuario extends AppCompatActivity {
             senha=txtSenhaUsuario.getText().toString();
             email=txtEmailUsuario.getText().toString();
             cpf=txtCpfUsuario.getText().toString();
-            nascimento=txtNascimento.getText().toString();
+            nascimento=txtNascimentoUsuario.getText().toString();
             //Criando obj
             usuario u =new usuario(nome,senha,cpf,nascimento);
             //JSON
