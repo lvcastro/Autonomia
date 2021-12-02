@@ -16,8 +16,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Autonomia">
+        <activity android:name=".AttPrecos"></activity>
+        <activity android:name=".AvalMec"></activity>
         <activity android:name=".AvalPosto"></activity>
-        <activity android:name=".AttPrecos" />
+        <activity android:name=".CadMec"></activity>
+        <activity android:name=".CadUsuario"></activity>
         <activity android:name=".CadPosto">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -39,7 +42,8 @@
 
         <activity
             android:name=".MapsActivity"
-            android:label="@string/title_activity_maps"></activity>
+            android:label="@string/title_activity_maps" >
+        </activity>
     </application>
 
 </manifest>

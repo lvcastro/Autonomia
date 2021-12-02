@@ -16,18 +16,21 @@ import java.util.Map;
 public class CadUsuario extends AppCompatActivity {
     private DatabaseReference BD = FirebaseDatabase.getInstance().getReference();
     private EditText txtNomeUsuario,txtEmailUsuario,txtCpfUsuario,txtSenhaUsuario,txtNascimentoUsuario;
-    private Button btnEnviar,btnCancelar;
+    private Button btnEnviar, btnCancelar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_cad_usuario);
+
         txtNomeUsuario =findViewById(R.id.txtNomeUsuario);
         txtEmailUsuario=findViewById(R.id.txtEmailUsuario);
         txtCpfUsuario =findViewById(R.id.txtCpfUsuario);
         txtSenhaUsuario=findViewById(R.id.txtSenhaUsuario);
         txtNascimentoUsuario =findViewById(R.id.txtNascimentoUsuario);
-        btnEnviar.setOnClickListener( new EscutadorBotao());
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cad_usuario);
+        btnEnviar = (Button) findViewById(R.id.btnEnviar);
+        btnCancelar = (Button) findViewById(R.id.btnCancelar);
 
+        btnEnviar.setOnClickListener( new EscutadorBotao());
     }
     private class EscutadorBotao implements View.OnClickListener {
         @Override
@@ -43,10 +46,8 @@ public class CadUsuario extends AppCompatActivity {
             //Criando obj
             usuario u =new usuario(nome,senha,cpf,nascimento);
             //JSON
-            Map<String,usuario> usuarios=new HashMap<>();
-            usuarios.put(email,u);
             //adicionar no banco
-            BD.child("usuarios").setValue(usuarios);
+            BD.child("usuários").child(email).setValue(u);
         }
     }
 
