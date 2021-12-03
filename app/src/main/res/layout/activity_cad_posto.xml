@@ -6,18 +6,9 @@
     android:layout_height="match_parent"
     android:background="#A3EBB1"
     tools:context=".CadPosto">
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:text="Avaliação"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+
     <CheckBox
-        android:id="@+id/checkBox"
+        android:id="@+id/cbLava"
         android:layout_width="wrap_content"
         android:layout_height="30dp"
         android:layout_marginStart="32dp"
@@ -26,43 +17,35 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView12" />
     <CheckBox
-        android:id="@+id/checkBox2"
+        android:id="@+id/cbLoja"
         android:layout_width="wrap_content"
         android:layout_height="30dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="4dp"
         android:text="Loja de conveniência"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+        app:layout_constraintTop_toBottomOf="@+id/cbLava" />
     <CheckBox
-        android:id="@+id/checkBox3"
+        android:id="@+id/cbBorracharia"
         android:layout_width="wrap_content"
         android:layout_height="30dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="4dp"
         android:text="Borracharia"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox2" />
+        app:layout_constraintTop_toBottomOf="@+id/cbLoja" />
     <CheckBox
-        android:id="@+id/checkBox4"
+        android:id="@+id/cbMercado"
         android:layout_width="wrap_content"
         android:layout_height="30dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="4dp"
         android:text="Mercado"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox3" />
-    <CheckBox
-        android:id="@+id/checkBox5"
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="4dp"
-        android:text="Outros"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox4" />
+        app:layout_constraintTop_toBottomOf="@+id/cbBorracharia" />
+
     <EditText
-        android:id="@+id/editTextTextPersonName7"
+        android:id="@+id/txtNumeroPosto"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -75,7 +58,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/textView11" />
     <EditText
-        android:id="@+id/editTextTextPersonName6"
+        android:id="@+id/txtRuaPosto"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -88,7 +71,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/textView10" />
     <EditText
-        android:id="@+id/editTextTextPersonName4"
+        android:id="@+id/txtCidadePosto"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -101,7 +84,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/textView7" />
     <EditText
-        android:id="@+id/editTextTextPersonName5"
+        android:id="@+id/txtBairroPosto"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -114,7 +97,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/textView9" />
     <EditText
-        android:id="@+id/editTextTextPersonName3"
+        android:id="@+id/txtEstadoPosto"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -208,7 +191,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/txtNomePosto"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -219,8 +202,9 @@
         app:layout_constraintBaseline_toBaselineOf="@+id/textView6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView6" />
+
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/txtOutro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
@@ -229,17 +213,8 @@
         android:inputType="textPersonName"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox5" />
-    <RatingBar
-        android:id="@+id/ratingBar"
-        style="?android:attr/ratingBarStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="8dp"
-        android:rating="3"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/cbMercado" />
+
     <Button
         android:id="@+id/btnAttPrecos"
         android:layout_width="wrap_content"
@@ -248,37 +223,34 @@
         android:layout_marginEnd="16dp"
         android:text="Atualizar preços"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+        app:layout_constraintTop_toBottomOf="@+id/txtOutro" />
 
     <Button
         android:id="@+id/btnAvalPosto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:text="avalPosto"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ratingBar" />
+        tools:layout_editor_absoluteY="577dp" />
 
     <Button
         android:id="@+id/btnAvalMec"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:text="avalMec"
         app:layout_constraintStart_toEndOf="@+id/btnAvalPosto"
-        app:layout_constraintTop_toBottomOf="@+id/ratingBar" />
+        tools:layout_editor_absoluteY="577dp" />
 
     <Button
         android:id="@+id/btnCadMec"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:text="cadMec"
         app:layout_constraintStart_toEndOf="@+id/btnAvalMec"
-        app:layout_constraintTop_toBottomOf="@+id/ratingBar" />
+        tools:layout_editor_absoluteY="577dp" />
 
     <Button
         android:id="@+id/btnCadUsuario"
@@ -289,5 +261,23 @@
         android:text="cadUsuario"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnAvalPosto" />
+
+    <Button
+        android:id="@+id/btnEnviarPosto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="130dp"
+        android:text="Confirmar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="524dp" />
+
+    <Button
+        android:id="@+id/btnCancelarPosto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancelar"
+        tools:layout_editor_absoluteX="-6dp"
+        tools:layout_editor_absoluteY="491dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

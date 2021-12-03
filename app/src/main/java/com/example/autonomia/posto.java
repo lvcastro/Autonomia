@@ -1,19 +1,15 @@
 package com.example.autonomia;
 
-import java.util.ArrayList;
-
 public class posto {
     private String nome,estado,cidade,bairro,rua,numero;
-    private ArrayList servicos = new ArrayList();
 
-    public posto(String nome, String estado, String cidade, String bairro, String rua, String numero, ArrayList servicos) {
+    public posto(String nome, String estado, String cidade, String bairro, String rua, String numero) {
         this.nome = nome;
         this.estado = estado;
         this.cidade = cidade;
         this.bairro = bairro;
         this.rua = rua;
         this.numero = numero;
-        this.servicos = servicos;
     }
     public posto(){}
 
@@ -65,11 +61,4 @@ public class posto {
         this.numero = numero;
     }
 
-    public ArrayList getServicos() {
-        return servicos;
-    }
-
-    public void setServicos(ArrayList servicos) {
-        this.servicos = servicos;
-    }
 }

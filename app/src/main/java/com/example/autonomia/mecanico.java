@@ -2,10 +2,8 @@ package com.example.autonomia;
 
 public class mecanico {
     String nome,estado,cidade,bairro,rua,numero;
-    Double rating;
 
-    public mecanico(String nome, String estado, String cidade, String bairro, String rua, String numero) {
-        this.nome = nome;
+    public mecanico( String estado, String cidade, String bairro, String rua, String numero) {
         this.estado = estado;
         this.cidade = cidade;
         this.bairro = bairro;
@@ -51,11 +49,5 @@ public class mecanico {
     }
     public void setNumero(String numero) {
         this.numero = numero;
-    }
-    public Double getRating() {
-        return rating;
-    }
-    public void setRating(Double rating) {
-        this.rating = rating;
     }
 }
