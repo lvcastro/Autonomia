@@ -1,7 +1,7 @@
 package com.example.autonomia;
 
 public class mecanico {
-    String nome,estado,cidade,bairro,rua,numero;
+    private String nome,estado,cidade,bairro,rua,numero;
 
     public mecanico( String estado, String cidade, String bairro, String rua, String numero) {
         this.estado = estado;
