@@ -37,12 +37,6 @@ public class mecanicoAval{
     public void setprazo(Double prazo) {
         this.prazo = prazo;
     }
-    public Double getRua() {
-        return rua;
-    }
-    public void setRua(Double rua) {
-        this.rua = rua;
-    }
     public Double getqualidade() {
         return qualidade;
     }
