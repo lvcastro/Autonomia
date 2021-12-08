@@ -88,7 +88,7 @@ public class CadPosto extends AppCompatActivity {
             //Obj Servico
             servico s = new servico(lava,loja,mercado,borracharia,outro);
             //enviando
-            BD.child("mecanico").child(nome).setValue(u);
+            BD.child("posto").child(nome).setValue(u);
             BD.child(nome).child("serviços").setValue(s);
         }
     }
